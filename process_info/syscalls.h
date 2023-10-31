@@ -74,6 +74,7 @@ struct landlock_ruleset_attr;
 enum landlock_rule_type;
 struct cachestat_range;
 struct cachestat;
+struct prinfo;
 
 #include <linux/types.h>
 #include <linux/aio_abi.h>
@@ -1271,4 +1272,5 @@ int __sys_getsockopt(int fd, int level, int optname, char __user *optval,
 int __sys_setsockopt(int fd, int level, int optname, char __user *optval,
 		int optlen);
 asmlinkage long sys_hello(void);
+asmlinkage long sys_get_process_statistics(struct prinfo *pinto);
 #endif
